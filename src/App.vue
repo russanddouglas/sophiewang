@@ -19,7 +19,7 @@
           <input type="text" v-model="searchInput"> 
           <div class="search-result">
             <div class="search-result__item" v-for="(item, idx) in searchResultList" :key="idx">
-              <img :src="item.gifUrl" alt="">
+              <img :src="item.gif100px" alt="">
             </div>
           </div>
         </div>
@@ -29,12 +29,12 @@
           <div class="search-result">
             <div class="search-result__item" v-for="(item, categoryIdx) in categoryResultList" :key="categoryIdx">
               <div v-if="!isClickedCategory" class="category" @click="onClickCategory(item.tagText)">
-                <img :src="item.gfycats[0].gifUrl" alt="">
+                <img :src="item.gfycats[0].gif100px" alt="">
                 <span class="category__text">{{ item.tagText }}</span>
               </div>
               <!-- click a category (for example: `trending`) -->
               <div v-else>
-                <img :src="item.gifUrl" alt="">
+                <img :src="item.gif100px" alt="">
               </div>
             </div>
           </div>
